@@ -4,48 +4,31 @@
     <div class="row">
       <h2 class="col-sm-4 mt-5" style="margin: 0px 0px 0px 100px; background-color: #EEEEEE; padding: 15px; border-radius:10px">OFERTAS DEL DIA</h2>
       <div id= "listaProducto" class="list-group list-group-horizontal ">
-        
-        <div class ="col-sm-2 card card-body producto">
-          <img src="img/cascos.webp" ></img> <!-- fakeimg is defined in the <style> tag, at the beginning -->
-          <h4 class= "mt-3">Cascos Otaku</h4>
-          <p>19,99€</p>
-        </div>
-
-        <div class ="col-sm-2 card card-body producto">
-          <img src="img/teclado.jfif"></img> <!-- fakeimg is defined in the <style> tag, at the beginning -->
-          <h4 class= "mt-3">Teclado</h4>
-          <p>19,99€</p>
-        </div>
-
-        <div class ="col-sm-2 card card-body producto">
-          <img src="img/grafica.png" ></img> <!-- fakeimg is defined in the <style> tag, at the beginning -->
-          <h4 class= "mt-3">Tarjeta Gráfica 4090</h4>
-          <p>1999,99€</p>
-        </div>
-        
+        @foreach($aProduct_offering as $producto)
+          <div class ="col-sm-2 card card-body producto">
+            <img src={{$producto->imgUrl}}></img> <!-- fakeimg is defined in the <style> tag, at the beginning -->
+            <h4 class= "mt-3">{{$producto->name}}</h4>
+            <p style="text-decoration:line-through">{{$producto->price}}€</p>
+            <p>{{round($producto->price - $producto->price*($producto->discountPercent/100),2)}}€</p>
+          </div>
+        @endforeach
       </div>
     </div>
     <div class="row">
     <h2 class="col-sm-4 mt-5" style="margin: 0px 0px 0px 100px; background-color: #EEEEEE; padding: 15px; border-radius:10px">NUEVOS PRODUCTOS</h2>
       <div id= "listaProducto" class="list-group list-group-horizontal mb-5">
-
-      <div class ="col-sm-2 card card-body producto">
-        <img src="img/cascos.webp"></img> <!-- fakeimg is defined in the <style> tag, at the beginning -->
-        <h4 class= "mt-3">Cascos Otaku</h4>
-        <p>19,99€</p>
-      </div>
-        
-      <div class ="col-sm-2 card card-body producto">
-        <img src="img/teclado.jfif"></img> <!-- fakeimg is defined in the <style> tag, at the beginning -->
-        <h4 class= "mt-3">Teclado</h4>
-        <p>19,99€</p>
-      </div>
-
-      <div class ="col-sm-2 card card-body producto">
-        <img src="img/grafica.png" ></img> <!-- fakeimg is defined in the <style> tag, at the beginning -->
-        <h4 class= "mt-3">Tarjeta Gráfica 4090</h4>
-        <p>1999,99€</p>
-      </div>
+      @foreach($aProduct_new as $producto)
+          <div class ="col-sm-2 card card-body producto">
+            <img src={{$producto->imgUrl}}></img> <!-- fakeimg is defined in the <style> tag, at the beginning -->
+            <h4 class= "mt-3">{{$producto->name}}</h4>
+            @if($producto->hasDiscount())
+              <p style="text-decoration:line-through">{{$producto->price}}€</p>
+              <p>{{round($producto->price - $producto->price*($producto->discountPercent/100),2)}}€</p>
+            @else
+             <p>{{$producto->price}}€</p>
+            @endif
+          </div>
+        @endforeach
 @stop
 @section('content-right')
     <!-- SECTION: Cards -->
