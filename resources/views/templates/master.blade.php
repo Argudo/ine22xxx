@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">      
-    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="/css/bootstrap.min.css"/>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Chakra+Petch:wght@500&family=Source+Sans+Pro&display=swap" rel="stylesheet">
     <!-- 
@@ -19,6 +19,7 @@
       .nav { background:rgba(110,123,251,1); }
       .producto {  height: min-content; text-align: right;}
       .producto img { width: 100%; height: 277px; object-fit: contain; border-bottom: 2px solid lightgray; padding-bottom: 10px;}
+      .showImg {width:20vh; height:20vh;}
       #listaProducto {gap : 50px; padding: 30px 100px; }
       .sideBar { background-color: #EEEEEE; }
       #marca{ font-size: 3rem; font-weight: 700; }
@@ -49,6 +50,6 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script>window.jQuery || document.write('https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"')</script>
     <!-- <script src="../../assets/js/vendor/popper.min.js"></script> -->
-    <script src="js/bootstrap.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
   </body>
 </html>

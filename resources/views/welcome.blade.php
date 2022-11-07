@@ -6,7 +6,7 @@
       <div id= "listaProducto" class="list-group list-group-horizontal ">
         @foreach($aProduct_offering as $producto)
           <div class ="col-sm-2 card card-body producto">
-            <img src={{$producto->imgUrl}}></img> <!-- fakeimg is defined in the <style> tag, at the beginning -->
+          <a href="product/{{$producto->id}}"><img src={{$producto->imgUrl}}></img></a> <!-- fakeimg is defined in the <style> tag, at the beginning -->
             <h4 class= "mt-3">{{$producto->name}}</h4>
             <p style="text-decoration:line-through">{{$producto->price}}€</p>
             <p>{{round($producto->price - $producto->price*($producto->discountPercent/100),2)}}€</p>

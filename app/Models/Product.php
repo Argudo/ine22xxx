@@ -30,6 +30,11 @@ class Product extends Model
             ->get();
     }
 
+    function Company(){
+        $company = $this->belongsTo(Company::class);
+        return $company;
+    }
+
     function hasDiscount(){
         $sNow = date('Y-m-d H:i:s');
         return $this->discountPercent > 0 && strtotime($this->discountStartAt) >= strtotime($sNow) && strtotime($this->discountEndAt) <= strtotime($sNow);

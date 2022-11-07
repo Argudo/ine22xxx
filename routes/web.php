@@ -26,3 +26,7 @@ Route::middleware([
         return view('dashboard');
     })->name('dashboard');
 });
+
+
+Route::get('/product/{product}',
+ [ProductController::class, 'show'])->name('product.show');
