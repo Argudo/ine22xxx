@@ -11,5 +11,6 @@
             @else
              <p>{{$product->price}}€</p>
             @endif
+            <a href="{{route('cart.add', $product->id)}}" class="btn btn-primary">Añadir al carrito</a>
 </div>
 @stop

@@ -30,3 +30,8 @@ Route::middleware([
 
 Route::get('/product/{product}',
  [ProductController::class, 'show'])->name('product.show');
+
+ Route::get('/addToCart/{product}',
+ 'App\Http\Controllers\ProductController@addToCart')->name('cart.add');
+
+ Route::get('/cart', 'App\Http\Controllers\CartController@Show')->name('cart.show');
