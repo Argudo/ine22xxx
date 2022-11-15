@@ -17,7 +17,8 @@
     <style>
       .fakeimg { height: 100px; background: #aaa; }
       .nav { background:rgba(110,123,251,1); }
-      .producto {  height: min-content; text-align: right;}
+      .producto { height: min-content; text-align: right;}
+      .productoCart { width:min-content; margin:50px; height: min-content; text-align: right;}
       .producto img { width: 100%; height: 277px; object-fit: contain; border-bottom: 2px solid lightgray; padding-bottom: 10px;}
       .showImg {width:20vh; height:20vh;}
       #listaProducto {gap : 50px; padding: 30px 100px; }

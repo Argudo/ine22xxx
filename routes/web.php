@@ -35,3 +35,5 @@ Route::get('/product/{product}',
  'App\Http\Controllers\ProductController@addToCart')->name('cart.add');
 
  Route::get('/cart', 'App\Http\Controllers\CartController@Show')->name('cart.show');
+
+ Route::get('/cart/{operation}/{product}', 'App\Http\Controllers\CartController@operate')->name('cart.operate');

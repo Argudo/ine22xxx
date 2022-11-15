@@ -11,7 +11,7 @@
       <ul class="navbar-nav ms-auto">
         <li class="nav-link"><a class="link""href="#" style="text-decoration:none; color:black">
         <span class="material-icons" style="font-size:1.5rem; margin-right: 5px"> perm_identity </span>Identifícate</a></li>
-        <li class="nav-link" ><a class="link"href="cart.show" style="text-decoration:none; color:black"><span class="material-icons"  style="font-size:1.5rem; margin-right:5px; margin-left:10px">shopping_cart</span>Carrito (
+        <li class="nav-link" ><a class="link"href="/cart" style="text-decoration:none; color:black"><span class="material-icons"  style="font-size:1.5rem; margin-right:5px; margin-left:10px">shopping_cart</span>Carrito (
         @if(session()->get('cart'))
         {{session()->get('cart')->itotalItems}}
         @else
