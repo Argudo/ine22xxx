@@ -1,7 +1,7 @@
-@extends('templates.master')
-@section('content-center')
+<x-guest-layout>
     <x-jet-authentication-card>
         <x-slot name="logo">
+            <x-jet-authentication-card-logo />
         </x-slot>
 
         <x-jet-validation-errors class="mb-4" />
@@ -39,11 +39,10 @@
                     </a>
                 @endif
 
-                <x-jet-button class="btn btn-primary">
+                <x-jet-button class="ml-4">
                     {{ __('auth.Log in') }}
                 </x-jet-button>
             </div>
-            <a class="btn btn-primary" href="{{route('register')}}">{{ __('auth.Register') }}</a>
         </form>
     </x-jet-authentication-card>
-@endsection
+</x-guest-layout>

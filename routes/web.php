@@ -29,9 +29,11 @@ Route::middleware([
 
 
 Route::get('/product/{product}',
- [ProductController::class, 'show'])->name('product.show');
+[ProductController::class, 'show'])->name('product.show');
 
- Route::get('/addToCart/{product}',
- 'App\Http\Controllers\ProductController@addToCart')->name('cart.add');
+Route::get('/addToCart/{product}', 'App\Http\Controllers\ProductController@addToCart')->name('cart.add');
+Route::get('/cart', 'App\Http\Controllers\CartController@Show')->name('cart.show');
 
- Route::get('/cart', 'App\Http\Controllers\CartController@Show')->name('cart.show');
+Route::get('/logout', 'App\Http\Controllers\UserController@Logout')->name('user.logout');
+Route::get('/user', 'App\Http\Controllers\UserController@Edit')->name('user.edit');
+Route::patch('/user/update', 'App\Http\Controllers\UserController@Update')->name('user.update');
