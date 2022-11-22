@@ -25,6 +25,7 @@
       .sideBar { background-color: #EEEEEE; }
       #marca{ font-size: 3rem; font-weight: 700; }
       .material-icons{ display: inline-flex; vertical-align: top; }
+      #main{ min-height: 80% !important; }
     </style>
 
     <title>My INE project</title>
