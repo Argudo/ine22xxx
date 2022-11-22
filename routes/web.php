@@ -33,6 +33,7 @@ Route::get('/product/{product}',
 
 Route::get('/addToCart/{product}', 'App\Http\Controllers\ProductController@addToCart')->name('cart.add');
 Route::get('/cart', 'App\Http\Controllers\CartController@Show')->name('cart.show');
+Route::get('/cart/{operation}/{product}', 'App\Http\Controllers\CartController@operate')->name('cart.operate');
 
 Route::get('/logout', 'App\Http\Controllers\UserController@Logout')->name('user.logout');
 Route::get('/user', 'App\Http\Controllers\UserController@Edit')->name('user.edit');

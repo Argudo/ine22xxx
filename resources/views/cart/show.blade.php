@@ -1,5 +1,6 @@
 @extends('templates.master')
 @section('content-center')
+
     @foreach(session()->get('cart')->hItem as $item)
     <div style="margin: 20px; width:50vw;" class="card card-body productCart">
         <div class="row">
@@ -22,8 +23,12 @@
     </div>
     @endforeach
     <div style="margin:20px;">
+        @if(isset($item))
         <p>Productos totales: {{session()->get('cart')->itotalItems}}</p>
         <p>Precio total: {{session()->get('cart')->dTotalPrice}} €</p>
         <a href=" {{ route('cart.operate', [ 'operation' => 'removeAll', 'product' => \App\Models\Product::find($item['id'])]) }}" class="btn btn-danger">Vaciar carrito</a>
+        @else
+        <p>El carrito está vacío</p>
+        @endif
     </div>
 @stop
