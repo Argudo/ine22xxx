@@ -29,4 +29,18 @@ class ProductController extends Controller
         //dd($cart);
         return view('/product/show', compact('product', 'success'));
     }
+
+    function update (Product $product, Request $request){
+        $product->name = $request->name;
+        $product->description = $request->description;
+        $product->company_id = $request->company_id;
+        $product->save();
+        $success = "El producto se ha actualizado";
+        return view('/product/show', compact('product', 'success'));
+    }
+
+    function edit (Product $product){
+        $aCompany = \App\Models\Company::all();
+        return view('/product/edit', compact(['product', 'aCompany']));
+    }
 }

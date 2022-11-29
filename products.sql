@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 15-11-2022 a las 18:05:26
+-- Tiempo de generación: 29-11-2022 a las 17:00:30
 -- Versión del servidor: 10.4.25-MariaDB
 -- Versión de PHP: 8.1.10
 
@@ -46,7 +46,7 @@ CREATE TABLE `products` (
 --
 
 INSERT INTO `products` (`id`, `company_id`, `name`, `description`, `imgUrl`, `price`, `discountPercent`, `discountStartAt`, `discountEndAt`, `created_at`, `updated_at`) VALUES
-(1, 1, 'Casco Otaku', 'Casco otaku reshulones de ultima generacion', 'img/cascos.webp', 19.99, 10, '2022-11-09 19:30:00', NULL, '2022-10-25 10:59:50', '2022-10-25 10:59:50'),
+(1, 2, 'Casco Otaku Ultimate', 'Cascos muy bonitos', 'img/cascos.webp', 19.99, 10, '2022-11-09 19:30:00', NULL, '2022-10-25 10:59:50', '2022-11-29 14:58:30'),
 (2, 2, 'Tarjeta 4090', 'La mejor tarjeta para no minar criptomonedas', 'img/grafica.png', 1999.99, 5, NULL, NULL, '2022-10-25 11:16:09', '2022-10-25 11:16:09'),
 (3, 3, 'Alfombrilla Hashbulla', 'Hashbulla.', 'img/hashbulla.webp', 4.99, 0, '2022-08-09 19:30:00', NULL, NULL, NULL),
 (4, NULL, 'Raton Gaming', 'Raton gaming ultrarápido, consumo eficiente de queso', 'img/raton.webp', 18.99, 20, '2022-10-25 17:30:06', '2025-10-22 17:30:06', NULL, NULL),

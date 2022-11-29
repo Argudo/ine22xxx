@@ -43,3 +43,4 @@ __('auth.Save') }}</button>
 </form>
 </div>
 </div>
+@endsection

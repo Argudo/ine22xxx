@@ -32,4 +32,8 @@ return [
     'New password' => 'Nueva contraseña',
     'Repeat password' => 'Confirmar nueva contraseña',
     'Save' => 'Guardar',
+    'Edit' => 'Editar',
+    'Company' => 'Empresa',
+    'DoSelect' => 'Seleccione una opción',
+    
 ];

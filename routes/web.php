@@ -38,3 +38,5 @@ Route::get('/cart/{operation}/{product}', 'App\Http\Controllers\CartController@o
 Route::get('/logout', 'App\Http\Controllers\UserController@Logout')->name('user.logout');
 Route::get('/user', 'App\Http\Controllers\UserController@Edit')->name('user.edit');
 Route::patch('/user/update', 'App\Http\Controllers\UserController@Update')->name('user.update');
+Route::patch('/product/{product}', 'App\Http\Controllers\ProductController@Update')->name('product.update')->middleware('role.editor');
+Route::get('/product/edit/{product}', 'App\Http\Controllers\ProductController@Edit')->name('product.edit')->middleware('role.editor');
