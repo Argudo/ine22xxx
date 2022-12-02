@@ -59,7 +59,7 @@ class User extends Authenticatable
         'profile_photo_url',
     ];
 
-    public static function isEditor(User $user){
+    public static function isEditor(User $user = null){
         return($user && $user->currentTeam->name == 'administrador');
     }
 }

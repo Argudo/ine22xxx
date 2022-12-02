@@ -11,7 +11,7 @@
   @else
     <p>{{$product->price}}€</p>
   @endif
-  @if(App\Models\User::isEditor(Auth::user())) <a href="{{route('product.edit', $product->id)}}" class="btn btn-primary">Editar producto rechulon</a>
+  @if(App\Models\User::isEditor(Auth::user())) <a href="{{route('product.edit', $product->id)}}" class="btn btn-primary">Editar producto</a>
   @endif
   <a href="{{route('cart.add', $product->id)}}" class="btn btn-primary">Añadir al carrito</a>
 </div>
